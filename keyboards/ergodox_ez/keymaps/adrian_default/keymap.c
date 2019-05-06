@@ -100,41 +100,41 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,--------------------------------------------------.           ,--------------------------------------------------.
  * |        |      |      |      |      |      |      |           |      |      |      |      |      |      |        |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
- * |        |      |      | MsUp |      |      |      |           |      |      |      |      |      |      |        |
+ * |        |      | Lclk | MsUp | Rclk |      | MS   |           |  MS  |      |      |      |      |      |        |
+ * |--------+------+------+------+------+------| WhUP |           | WhDwn|------+------+------+------+------+--------|
+ * |        |      |MsLeft|MsDown|MsRght|      |------|           |------| Left | Down |  Up  | Right|      |  Play  |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * |        |      |MsLeft|MsDown|MsRght|      |------|           |------|      |      |      |      |      |  Play  |
- * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * |        |      |      |      |      |      |      |           |      |      |      | Prev | Next |      |        |
+ * |        |      |      |      |      |      |      |           |      |      |      |      |      |      |        |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   |      |      |      | Lclk | Rclk |                                       |VolUp |VolDn | Mute |      |      |
+ *   |      |      |      |      |      |                                       |VolUp |VolDn | Mute |      |      |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
  *                                        |      |      |       |      |      |
  *                                 ,------|------|------|       |------+------+------.
- *                                 |      |      |      |       |      |      |Brwser|
- *                                 |      |      |------|       |------|      |Back  |
- *                                 |      |      |      |       |      |      |      |
+ *                                 |  MAC |  MAC |      |       |      |  MAC |  MAC |
+ *                                 |Window|Window|------|       |------|Window|Window|
+ *                                 | Left |  App |      |       |      |  All | Right|
  *                                 `--------------------'       `--------------------'
  */
 [MOVE] = LAYOUT_ergodox(
   // left hand
   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-  KC_TRNS, KC_TRNS, KC_TRNS, KC_MS_U, KC_TRNS, KC_TRNS, KC_TRNS,
+  KC_TRNS, KC_TRNS, KC_BTN1, KC_MS_U, KC_BTN2, KC_TRNS, KC_WH_U,
   KC_TRNS, KC_TRNS, KC_MS_L, KC_MS_D, KC_MS_R, KC_TRNS,
   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-  KC_TRNS, KC_TRNS, KC_TRNS, KC_BTN1, KC_BTN2,
+  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
                                                KC_TRNS, KC_TRNS,
                                                         KC_TRNS,
-                                      KC_TRNS, KC_TRNS, KC_TRNS,
+                          LCTL(KC_LEFT), LCTL(KC_DOWN), KC_TRNS,
   // right hand
-  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-           KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_MPLY,
-  KC_TRNS, KC_TRNS, KC_TRNS, KC_MPRV, KC_MNXT, KC_TRNS, KC_TRNS,
-                    KC_VOLU, KC_VOLD, KC_MUTE, KC_TRNS, KC_TRNS,
+  KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS,     KC_TRNS,  KC_TRNS, KC_TRNS,
+  KC_WH_D, KC_TRNS, KC_TRNS,    KC_TRNS,     KC_TRNS,  KC_TRNS, KC_TRNS,
+           KC_LEFT, KC_DOWN,    KC_UP,       KC_RGHT,  KC_TRNS, KC_MPLY,
+  KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS,     KC_TRNS,  KC_TRNS, KC_TRNS,
+                    KC__VOLUP,  KC__VOLDOWN, KC__MUTE, KC_TRNS, KC_TRNS,
   KC_TRNS, KC_TRNS,
   KC_TRNS,
-  KC_TRNS, KC_TRNS, KC_WBAK
+  KC_TRNS, LCTL(KC_UP), LCTL(KC_RGHT)
 ),
 };
 

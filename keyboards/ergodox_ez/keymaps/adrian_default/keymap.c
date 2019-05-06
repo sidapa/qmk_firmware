@@ -136,7 +136,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_TRNS,
   KC_TRNS, LCTL(KC_UP), LCTL(KC_RGHT)
 ),
-};
 
 /* Keymap 3: Tmux and Vim
  *

@@ -112,8 +112,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                                        |      |      |       |      |      |
  *                                 ,------|------|------|       |------+------+------.
  *                                 |  MAC |  MAC |      |       |      |  MAC |  MAC |
- *                                 |Window|Window|------|       |------|Window|Window|
- *                                 | Left |  App |      |       |      |  All | Right|
+ *                                 |Window|  Tab |------|       |------|  Tab |Window|
+ *                                 | Left | Left |WinApp|       |WinAll| Right| Right|
  *                                 `--------------------'       `--------------------'
  */
 [MOVE] = LAYOUT_ergodox(
@@ -125,7 +125,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
                                                KC_TRNS, KC_TRNS,
                                                         KC_TRNS,
-                          LCTL(KC_LEFT), LCTL(KC_DOWN), KC_TRNS,
+                    LCTL(KC_LEFT), LGUI(KC_LEFT), LCTL(KC_DOWN),
   // right hand
   KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS,     KC_TRNS,  KC_TRNS, KC_TRNS,
   KC_WH_D, KC_TRNS, KC_TRNS,    KC_TRNS,     KC_TRNS,  KC_TRNS, KC_TRNS,
@@ -134,7 +134,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                     KC__VOLUP,  KC__VOLDOWN, KC__MUTE, KC_TRNS, KC_TRNS,
   KC_TRNS, KC_TRNS,
   KC_TRNS,
-  KC_TRNS, LCTL(KC_UP), LCTL(KC_RGHT)
+  LCTL(KC_UP), LGUI(KC_RIGHT), LCTL(KC_RGHT)
 ),
 
 /* Keymap 3: Tmux and Vim

@@ -22,7 +22,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * |  LCtrl |   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |; / L2|' / L3  |
  * |--------+------+------+------+------+------|  L3  |           |      |------+------+------+------+------+--------|
- * | LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |   /  | RShift |
+ * | LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |/ / L2| RShift |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
  *   | LGui |      |      |  L2  |   -  |                                       |   _  |      |      |      |      |
  *   `----------------------------------'                                       `----------------------------------'
@@ -48,7 +48,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   XXXXXXX,   KC_6,    KC_7,      KC_8,       KC_9,       KC_0,                KC_MINS,
   XXXXXXX,   KC_Y,    KC_U,      KC_I,       KC_O,       KC_P,                KC_BSLS,
              KC_H,    KC_J,      KC_K,       KC_L,       LT(MOVE, KC_SCLN),   LT(TMUX, KC_QUOT),
-  XXXXXXX,   KC_N,    KC_M,      KC_COMM,    KC_DOT,     KC_SLSH,             KC_RSFT,
+  XXXXXXX,   KC_N,    KC_M,      KC_COMM,    KC_DOT,     LT(MOVE, KC_SLSH),   KC_RSFT,
                       KC_UNDS,   XXXXXXX,    XXXXXXX,    XXXXXXX,             XXXXXXX,
   KC_PGUP,   CTL_T(KC_ESC),
   KC_PGDN,

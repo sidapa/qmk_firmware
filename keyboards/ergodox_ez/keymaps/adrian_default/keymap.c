@@ -106,7 +106,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * |        |      |      |      |      |      |      |           |      |      |      |      |      |      |        |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   |      |      |      |      |      |                                       |VolUp |VolDn | Mute |      |      |
+ *   |      |      |      |      |      |                                       | Mute |VolUp |VolDn |      |      |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
  *                                        |      |      |       |      |      |
@@ -127,11 +127,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                         KC_TRNS,
                     LCTL(KC_LEFT), LGUI(KC_LEFT), LCTL(KC_DOWN),
   // right hand
-  KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS,     KC_TRNS,  KC_TRNS, KC_TRNS,
-  KC_WH_D, KC_TRNS, KC_TRNS,    KC_TRNS,     KC_TRNS,  KC_TRNS, KC_TRNS,
-           KC_LEFT, KC_DOWN,    KC_UP,       KC_RGHT,  KC_TRNS, KC_MPLY,
-  KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS,     KC_TRNS,  KC_TRNS, KC_TRNS,
-                    KC__VOLUP,  KC__VOLDOWN, KC__MUTE, KC_TRNS, KC_TRNS,
+  KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS,     KC_TRNS,     KC_TRNS, KC_TRNS,
+  KC_WH_D, KC_TRNS, KC_TRNS,    KC_TRNS,     KC_TRNS,     KC_TRNS, KC_TRNS,
+           KC_LEFT, KC_DOWN,    KC_UP,       KC_RGHT,     KC_TRNS, KC_MPLY,
+  KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS,     KC_TRNS,     KC_TRNS, KC_TRNS,
+                    KC__MUTE,   KC__VOLUP,   KC__VOLDOWN, KC_TRNS, KC_TRNS,
   KC_TRNS, KC_TRNS,
   KC_TRNS,
   LCTL(KC_UP), LGUI(KC_RIGHT), LCTL(KC_RGHT)
